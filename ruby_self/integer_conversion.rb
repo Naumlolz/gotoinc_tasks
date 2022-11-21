@@ -13,7 +13,7 @@ end
 %i[first second third].map.with_index { |i, v| [i, v.next] }.to_h
 
 puts %w[first second third].map.with_index { |i, v|
-  [i.to_sym, "#{(i[0] + i[-2..-1]).capitalize} (#{v.next})"]
+  [i.to_sym, "#{(i[0] + i[-2..]).capitalize} (#{v.next})"]
 }.to_h
 
 a = "Возьмите текст из этого задания и извлеките из него все слова,
